@@ -5,7 +5,7 @@
 
 /* General Selector */
 * {
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Element Selectors */
@@ -23,7 +23,7 @@ header section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 300px;
+    height: 250px;
 }
 
 nav {
@@ -38,7 +38,7 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 nav a[href^="#"]:hover {
@@ -58,12 +58,33 @@ a:visited {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 /* Class Selectors */
 .nav-divider {
     font-size: 30px;
+}
+
+.main-section {
+    display: flex;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.main-left {
+    font-size: 40px;
+    width: 25%;
+    padding-right: 15px;
+    text-align: right;
+    border-right: 4px solid black;
+}
+
+.main-right {
+    width: 80%;
+    padding-left: 15px;
 }
 
 /* Id Selectors */
@@ -87,7 +108,7 @@ main {
 
 #color-bar {
     background-color: var(--color-bar-blue);
-    margin-top: 100px;
+    margin-top: 75px;
     height: 100px;
     width: 100%;
     position: absolute;
