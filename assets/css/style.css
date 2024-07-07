@@ -186,6 +186,10 @@ main {
 }
 
 
+#my-name {
+    padding-left: 25px;
+}
+
 /* Media Queries */
 
 @media (max-width:  1031px){
@@ -276,6 +280,7 @@ main {
     }
     
     #my-name {
+        padding-left: 0px;
         font-size: x-large;
         text-align: center;
     }
