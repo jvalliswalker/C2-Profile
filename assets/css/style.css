@@ -172,9 +172,9 @@ main {
   box-shadow: 1px 1px 7px black;
 }
 
-#nameplate div {
+/* #nameplate div {
   margin-left: 25px;
-}
+} */
 
 #color-bar {
   background-color: var(--color-bar-blue);
@@ -234,11 +234,35 @@ main {
 }
 
 @media (max-width: 745px){
-    #my-name span {
-        display: none;
+
+    nav {
+        font-size: large;
+        gap: 15px;
     }
 
-    #my-name::before {
-        content: 'JVW';
+    nav a {
+        padding: 0px;
+    }
+
+    #header-container {
+      margin-left: var(--margin-sides-mobile);
+      margin-right: var(--margin-sides-mobile);
+      justify-content: center;
+    }
+    
+    #my-name {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    #my-name span {
+        display: inline;
+    }
+
+    #nameplate {
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-content: flex-end;
     }
 }
