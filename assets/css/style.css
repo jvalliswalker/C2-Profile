@@ -138,16 +138,12 @@ main {
   border: 5px solid var(--color-border-blue);
 }
 
-.project-card:hover {
-  /* box-shadow: var(--color-teal); */
-}
-
 .project-card img {
   transition: var(--transition-standard);
 }
 
 .project-card:hover img {
-  filter: blur(0px);
+  filter: blur(0px) contrast(75%)
 }
 
 /* Id Selectors */
