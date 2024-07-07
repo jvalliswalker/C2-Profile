@@ -1,7 +1,8 @@
 /* Root Selector */
 :root {
   --color-bar-blue: #0a66c2;
-  --margin-sides-computer: 10%;
+  --margin-sides-computer: 5%;
+  --margin-sides-table: 3%;
   --margin-sides-mobile: 0%;
   --font-standard: system-ui;
   /* --color-teal: 0 0 20px rgb(1, 232, 232); */
@@ -74,11 +75,15 @@ main {
 }
 
 .main-left {
-  font-size: 40px;
+  font-size: 35px;
   padding-right: 25px;
   margin-right: 25px;
   text-align: right;
-  border-right: 4px solid black;
+  border-right: 2px solid black;
+}
+
+.main-right {
+    padding-bottom: 15px;
 }
 
 .full-grid-item {
@@ -128,7 +133,6 @@ main {
   overflow: hidden;
   background-color: lightblue;
   transition: var(--transition-standard);
-  /* width: 100%; */
   border: 5px solid var(--color-border-blue);
 }
 
@@ -195,11 +199,17 @@ main {
 
 /* Media Queries */
 
+@media (max-width: 1200px) {
+    main {
+        margin-left: var(--margin-sides-table);
+        margin-right: var(--margin-sides-table);
+    }
+}
+
 @media (max-width:  1031px){
     #my-name span {
         display: block;
     }
-
 }
 
 @media (max-width: 950px){
@@ -219,12 +229,7 @@ main {
     #headshot {
         display: none;
     }
-}
 
-@media (max-width: 835px){
-    
-
-    
     main {
         margin-left: var(--margin-sides-mobile);
         margin-right: var(--margin-sides-mobile);
@@ -236,25 +241,7 @@ main {
     }
 
     #my-name span {
-        display: block;
-    }
-}
-
-@media (max-width: 745px){
-
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
-
-    nav {
-        font-size: large;
-        gap: 15px;
-    }
-
-    nav a {
-        padding: 0px;
+        display: inline;
     }
 
     main {
@@ -263,7 +250,7 @@ main {
     }
 
     .main-left {
-        text-align: left;
+        text-align: right;
         border-right: none;
         border-bottom: 4px solid black;
         margin-left: 15px;
@@ -278,6 +265,43 @@ main {
 
     #about-me span {
         display: inline;
+    }
+
+    #my-name span {
+        display: inline;
+    }
+
+}
+
+@media (max-width: 835px){
+    #my-name span {
+        display: block;
+    }
+
+    .project-image {
+        width: 150%
+    }
+}
+
+@media (max-width: 745px){
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .project-image {
+        width: 200%;
+    }
+
+    nav {
+        font-size: large;
+        gap: 15px;
+    }
+
+    nav a {
+        padding: 0px;
     }
 
     #header-container {
