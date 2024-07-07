@@ -4,6 +4,8 @@
   --margin-sides-computer: 60px;
   --font-standard: system-ui;
   --color-teal: 0 0 20px rgb(1, 232, 232);
+  --transition-standard: all 0.2s ease-in-out;
+  --main-right-margin: 2%;
 }
 
 /* General Selector */
@@ -76,13 +78,13 @@ main {
 
 .main-left {
   font-size: 40px;
-  padding-right: 15px;
+  margin-right: 15px;
   text-align: right;
   border-right: 4px solid black;
 }
 
 .main-right {
-  padding-left: 15px;
+  margin-left: var(--main-right-margin);
 }
 
 .full-grid-item {
@@ -92,33 +94,56 @@ main {
   height: 300px;
 }
 
-/* Id Selectors */
-#project-css-teaching-demo {
-  position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-}
-
-#projects {
+.projects {
   display: grid;
   grid-template-columns: auto auto auto auto;
   background-color: gray;
   gap: 10px;
 }
 
-#projects a {
+.project-image {
+  width: 100%; /* Makes image fit to div size*/
+  display: block;
+  object-fit: none; /* Means image doesn't scale down, just shows a portion of the image */
+}
+
+.project-title {
+  position: absolute;
+  left: 38%;
+  top: 45%;
+  color: white;
+  font-size: x-large;
+  z-index: 10;
+  filter: opacity(0);
+  transition: var(--transition-standard);
+}
+
+.project-card:hover .project-title {
+  filter: opacity(100);
+}
+
+.project-card {
   position: relative;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
-}
-
-.project-box {
   background-color: lightblue;
+  transition: var(--transition-standard);
 }
 
-.project-box:hover {
+.project-card:hover {
   box-shadow: var(--color-teal);
+}
+
+.project-card img {
+  transition: var(--transition-standard);
+}
+
+.project-card:hover img {
+  filter: blur(2px);
+}
+
+/* Id Selectors */
+#project-css-teaching-demo-image {
+  object-position: 75% 50%; /* Offsets the image position within the container div */
 }
 
 #nameplate {
