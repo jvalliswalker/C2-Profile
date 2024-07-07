@@ -92,6 +92,18 @@ main {
   height: 300px;
 }
 
+.half-grid-item-left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 150px;
+}
+
+.half-grid-item-right {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    height: 150px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -117,8 +129,6 @@ main {
   transition: var(--transition-standard);
 }
 
-
-
 .project-card {
   position: relative;
   overflow: hidden;
@@ -129,7 +139,7 @@ main {
 }
 
 .project-card:hover {
-    /* box-shadow: var(--color-teal); */
+  /* box-shadow: var(--color-teal); */
 }
 
 .project-card img {
@@ -143,6 +153,10 @@ main {
 /* Id Selectors */
 #project-css-teaching-demo-image {
   object-position: 75% 50%; /* Offsets the image position within the container div */
+}
+
+#placeholder-1 {
+    object-position: 50% 25%;
 }
 
 #nameplate {
