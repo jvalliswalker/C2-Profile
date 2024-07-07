@@ -119,7 +119,7 @@ main {
   padding: 7px;
   color: white;
   font-size: x-large;
-  z-index: 10;
+  z-index: 5;
   background-color: var(--color-border-blue);
   transition: var(--transition-standard);
 }
@@ -235,6 +235,12 @@ main {
 
 @media (max-width: 745px){
 
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
     nav {
         font-size: large;
         gap: 15px;
@@ -242,6 +248,25 @@ main {
 
     nav a {
         padding: 0px;
+    }
+
+    main {
+        grid-template-columns: none;
+        row-gap: 10px;
+    }
+
+    .main-left {
+        text-align: left;
+        border-right: none;
+        border-bottom: 4px solid black;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-right: 0px;
+    }
+
+    .main-right {
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
     #header-container {
