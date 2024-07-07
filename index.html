@@ -2,15 +2,16 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Portfolio</title>
   </head>
   <body>
     <header>
       <div id="color-bar"></div>
-      <section>
+      <section id="header-container">
         <section id="nameplate">
-          <img src="./assets/images/headshot.jpg" alt="Professional Headshot" />
+          <img src="./assets/images/headshot.jpg" alt="Professional Headshot" id="headshot" />
           <div>Jamil Vallis-Walker</div>
         </section>
         <nav>
@@ -36,7 +37,7 @@
     </header>
     <main>
       <!-- About Me Title -->
-      <div class="main-left">
+      <div class="main-left" id="about-me">
         <div>About</div>
         <div>Me</div>
       </div>
@@ -51,7 +52,7 @@
       </div>
       <!-- Projects Content -->
       <div class="main-right">
-        <section class="projects">
+        <section class="projects" id="projects">
           <div class="project-card full-grid-item">
             <a
               href="https://jvalliswalker.github.io/css-teaching-demo/"
