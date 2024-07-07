@@ -143,6 +143,10 @@ main {
 
 /* Id Selectors */
 
+#about-me span {
+    display: block;
+}
+
 #project-css-teaching-demo-image {
   object-position: 75% 50%; /* Offsets the image position within the container div */
 }
@@ -271,6 +275,10 @@ main {
     .main-right {
         margin-left: 16px;
         margin-right: 16px;
+    }
+
+    #about-me span {
+        display: inline;
     }
 
     #header-container {
