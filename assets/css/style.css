@@ -3,7 +3,9 @@
   --color-bar-blue: #0a66c2;
   --margin-sides-computer: 60px;
   --font-standard: system-ui;
-  --color-teal: 0 0 20px rgb(1, 232, 232);
+  /* --color-teal: 0 0 20px rgb(1, 232, 232); */
+  --color-border-teal: rgb(128, 231, 249);
+  --color-background-white: rgb(236, 252, 255);
   --transition-standard: all 0.2s ease-in-out;
   --main-right-margin: 2%;
 }
@@ -15,7 +17,7 @@
 
 /* Element Selectors */
 body {
-  background-color: rgb(236, 252, 255);
+  background-color: var(--color-background-white);
   margin: 0px;
 }
 
@@ -90,7 +92,6 @@ main {
 .full-grid-item {
   grid-column-start: 1;
   grid-column-end: 5;
-  width: 100%;
   height: 300px;
 }
 
@@ -105,21 +106,18 @@ main {
   width: 100%; /* Makes image fit to div size*/
   display: block;
   object-fit: none; /* Means image doesn't scale down, just shows a portion of the image */
+  filter: blur(3px);
 }
 
 .project-title {
   position: absolute;
-  left: 38%;
-  top: 45%;
+  top: 6%;
+  padding: 7px;
   color: white;
   font-size: x-large;
   z-index: 10;
-  filter: opacity(0);
+  background-color: var(--color-bar-blue);
   transition: var(--transition-standard);
-}
-
-.project-card:hover .project-title {
-  filter: opacity(100);
 }
 
 .project-card {
@@ -127,10 +125,12 @@ main {
   overflow: hidden;
   background-color: lightblue;
   transition: var(--transition-standard);
+  /* width: 100%; */
+  border: 5px solid var(--color-bar-blue);
 }
 
 .project-card:hover {
-  box-shadow: var(--color-teal);
+    /* box-shadow: var(--color-teal); */
 }
 
 .project-card img {
@@ -138,7 +138,7 @@ main {
 }
 
 .project-card:hover img {
-  filter: blur(2px);
+  filter: blur(0px);
 }
 
 /* Id Selectors */
