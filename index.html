@@ -11,13 +11,19 @@
       <div id="color-bar"></div>
       <section id="header-container">
         <section id="nameplate">
-          <img src="./assets/images/headshot.jpg" alt="Professional Headshot" id="headshot" />
+          <img
+            src="./assets/images/headshot.jpg"
+            alt="Professional Headshot"
+            id="headshot"
+          />
           <div id="my-name"><span>Jamil</span> <span>Vallis-Walker</span></div>
         </section>
         <nav>
           <a onclick="goToElement(this)" data-goto="about-me">About Me</a>
           <div class="nav-divider"></div>
           <a onclick="goToElement(this)" data-goto="projects">Projects</a>
+          <div class="nav-divider"></div>
+          <a onclick="goToElement(this)" data-goto="contact">Contact</a>
           <div class="nav-divider"></div>
           <a
             href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/"
@@ -46,9 +52,7 @@
         the leap into full stack web development.
       </div>
       <!-- Projects Title -->
-      <div class="main-left">
-        Projects
-      </div>
+      <div class="main-left">Projects</div>
       <!-- Projects Content -->
       <div class="main-right">
         <section class="projects" id="projects">
@@ -66,32 +70,68 @@
             </a>
           </div>
           <div class="project-card half-grid-item-left">
-            <a
-              href="https://www.google.com"
-              target="_blank"
-            >
+            <a href="https://www.google.com" target="_blank">
               <div class="project-title">Placeholder</div>
               <img
-                src="./assets/images/google.png" 
+                src="./assets/images/google.png"
                 class="project-image"
                 id="placeholder-1"
-              >
+              />
             </a>
           </div>
           <div class="project-card half-grid-item-right">
-            <a
-              href="https://www.google.com"
-              target="_blank"
-            >
+            <a href="https://www.google.com" target="_blank">
               <div class="project-title">Placeholder</div>
               <img
-                src="./assets/images/google.png" 
+                src="./assets/images/google.png"
                 class="project-image"
                 id="placeholder-1"
-              >
+              />
             </a>
           </div>
         </section>
+      </div>
+      <!-- Contact Info -->
+      <div class="main-left" id="contact">
+        <span>Contact</span> <span>Info</span>
+      </div>
+      <!-- About Me Content -->
+      <div class="main-right">
+        <div id="contact-info-grid">
+          <div>
+            I'm excited to connect with you. Please reach out to me via email or
+            LinkedIn:
+          </div>
+          <div class="contact-clicker">
+            <button>
+              <img
+                src="./assets/images/email-symbol.png"
+                id="email-symbol-contact"
+                alt="email"
+              />
+            </button>
+            <div>Email</div>
+          </div>
+          <!-- <div class="contact-divider"></div> -->
+          <!-- <form>
+              <p>Name</p>
+              <input type="text">
+              <p>Email</p>
+              <input type="email">
+              <p>Message</p>
+              <textarea></textarea>
+            </form> -->
+          <div class="contact-clicker">
+            <a href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/" target="_blank">
+              <img
+                src="./assets/images/linkedin-blue.png"
+                id="linked-logo-contact"
+                alt="LinkedIn"
+              />
+            </a>
+            <div>LinkedIn</div>
+          </div>
+        </div>
       </div>
     </main>
     <footer></footer>
