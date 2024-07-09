@@ -103,7 +103,7 @@
             LinkedIn:
           </div>
           <div class="contact-clicker">
-            <button>
+            <button onclick="revealEmailForm()">
               <img
                 src="./assets/images/email-symbol.png"
                 id="email-symbol-contact"
@@ -112,17 +112,11 @@
             </button>
             <div>Email</div>
           </div>
-          <!-- <div class="contact-divider"></div> -->
-          <!-- <form>
-              <p>Name</p>
-              <input type="text">
-              <p>Email</p>
-              <input type="email">
-              <p>Message</p>
-              <textarea></textarea>
-            </form> -->
           <div class="contact-clicker">
-            <a href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/"
+              target="_blank"
+            >
               <img
                 src="./assets/images/linkedin-blue.png"
                 id="linked-logo-contact"
@@ -131,6 +125,23 @@
             </a>
             <div>LinkedIn</div>
           </div>
+        </div>
+        <div id="email-form-container" class="test">
+          <div id="email-form-overlay">Coming Soon</div>
+          <form id="email-form">
+            <div>
+              <p>Name</p>
+              <input type="text" />
+            </div>
+            <div>
+              <p>Email</p>
+              <input type="email" />
+            </div>
+            <div>
+              <p>Message</p>
+              <textarea></textarea>
+            </div>
+          </form>
         </div>
       </div>
     </main>
