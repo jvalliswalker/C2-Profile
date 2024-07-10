@@ -280,19 +280,19 @@ main {
 /* ==== Media Queries ==== */
 
 @media (max-width: 1200px) {
-  main {
+  /* Elements */
+    main {
     margin-left: var(--margin-sides-table);
     margin-right: var(--margin-sides-table);
   }
-}
 
-@media (max-width: 1031px) {
+  /* Ids */
   #my-name span {
     display: block;
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1090px) {
   /* Elements */
   main {
     margin-left: var(--margin-sides-mobile);
@@ -337,7 +337,7 @@ main {
   }
 }
 
-@media (max-width: 835px) {
+@media (max-width: 990px) {
   /* Classes */
   .project-image {
     width: 150%;
@@ -349,7 +349,7 @@ main {
   }
 }
 
-@media (max-width: 745px) {
+@media (max-width: 900px) {
   /* Elements */
   header {
     position: sticky;
@@ -364,11 +364,6 @@ main {
 
   nav a {
     padding: 0px;
-  }
-
-  /* Classes */
-  .project-image {
-    width: 200%;
   }
 
   /* Ids */
