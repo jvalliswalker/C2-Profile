@@ -1,13 +1,13 @@
 /* Root Selector */
 :root {
-  --color-bar-blue: #0a66c2;
+  --color-bar-blue: #0ac294;
   --margin-sides-computer: 5%;
   --margin-sides-table: 3%;
   --margin-sides-mobile: 0%;
   --font-standard: system-ui;
   /* --color-teal: 0 0 20px rgb(1, 232, 232); */
   --color-border-teal: rgb(128, 231, 249);
-  --color-border-blue: #2c77c3;
+  --color-border-blue: #0ac294;
   --color-background-white: rgb(236, 252, 255);
   --transition-standard: all 0.2s ease-in-out;
   --main-right-margin: 2%;
@@ -20,8 +20,8 @@
 
 /* Element Selectors */
 body {
-  background-color: var(--color-background-white);
-  margin: 0px;
+    background-color: var(--color-background-white);
+    margin: 0px;
 }
 
 header {
@@ -90,6 +90,7 @@ main {
   margin-right: 25px;
   text-align: right;
   border-right: 2px solid black;
+  color: var(--color-bar-blue)
 }
 
 .main-right {
