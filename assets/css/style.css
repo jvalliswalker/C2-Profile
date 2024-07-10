@@ -1,27 +1,26 @@
-/* Root Selector */
+/*  ==== Root Selector ==== */
 :root {
-  --color-bar-blue: #0ac294;
+  --color-bar-teal: #0ac294;
+  --color-border-teal: rgb(128, 231, 249);
+  --color-border-blue: #0ac294;
+  --main-right-margin: 2%;
   --margin-sides-computer: 5%;
   --margin-sides-table: 3%;
   --margin-sides-mobile: 0%;
-  --font-standard: system-ui;
-  /* --color-teal: 0 0 20px rgb(1, 232, 232); */
-  --color-border-teal: rgb(128, 231, 249);
-  --color-border-blue: #0ac294;
+  --font-standard: system-ui, serif;
   --color-background-white: rgb(236, 252, 255);
   --transition-standard: all 0.2s ease-in-out;
-  --main-right-margin: 2%;
 }
 
-/* General Selector */
+/* ==== General Selector ==== */
 * {
   font-family: var(--font-standard);
 }
 
-/* Element Selectors */
+/*  ==== Element Selectors ==== */
 body {
-    background-color: var(--color-background-white);
-    margin: 0px;
+  background-color: var(--color-background-white);
+  margin: 0px;
 }
 
 header {
@@ -68,65 +67,73 @@ main {
   margin-bottom: 100px;
 }
 
-/* Class Selectors */
+/* ==== Class Selectors ==== */
 
+/* Used for icon buttons in 'Contact Me' section */
 .contact-clicker {
-    text-align: center;
+  text-align: center;
 }
 
+/* Creates visual dividers in nav bar */
 .nav-divider::after {
   content: "|";
   font-size: 30px;
 }
 
-.contact-divider::after {
-    content: "|";
-    font-size: 30px;
-}
-
+/* Formatting for left-sided content in site body */
 .main-left {
   font-size: 35px;
   padding-right: 25px;
   margin-right: 25px;
   text-align: right;
   border-right: 2px solid black;
-  color: var(--color-bar-blue)
+  color: var(--color-bar-teal);
 }
 
+/* Formatting for right-sided content in site body */
 .main-right {
-    padding-top: 5px;
-    padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
+/* For project cards taking up an entire grid row */
 .full-grid-item {
   grid-column-start: 1;
   grid-column-end: 5;
   height: 300px;
 }
 
+/* For project cards taking up two grid slots on the left */
 .half-grid-item-left {
   grid-column-start: 1;
   grid-column-end: 3;
   height: 150px;
 }
 
+/* For project cards taking up two grid slots on the right */
 .half-grid-item-right {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    height: 150px;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  height: 150px;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
+/* Standard project card formatting */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background-color: lightblue;
+  transition: var(--transition-standard);
+  border: 5px solid var(--color-border-blue);
 }
 
-.project-image {
-  width: 100%; /* Makes image fit to div size*/
-  display: block;
-  object-fit: none; /* Means image doesn't scale down, just shows a portion of the image */
-  filter: blur(3px);
+.project-card img {
+  transition: var(
+    --transition-standard
+  ); /* Container transition for card images */
+}
+
+.project-card:hover img {
+  filter: blur(0px) contrast(75%); /* De-blur on-hover effect */
 }
 
 .project-title {
@@ -140,114 +147,115 @@ main {
   transition: var(--transition-standard);
 }
 
-.project-card {
-  position: relative;
-  overflow: hidden;
-  background-color: lightblue;
-  transition: var(--transition-standard);
-  border: 5px solid var(--color-border-blue);
+/* Formatting of preview images used in project cards  */
+.project-image {
+  width: 100%; /* Makes image fit to div size*/
+  display: block;
+  object-fit: none; /* Means image doesn't scale down, just shows a portion of the image */
+  filter: blur(3px);
 }
 
-.project-card img {
-  transition: var(--transition-standard);
+/* ==== Id Selectors ==== */
+
+#about-me span {
+  display: block;
 }
 
-.project-card:hover img {
-  filter: blur(0px) contrast(75%)
+/* 'Behind Content' color bar in header */
+#color-bar {
+  background-color: var(--color-bar-teal);
+  margin-top: 75px;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: -1;
 }
 
-/* Id Selectors */
+/* Container for contact info section */
+#contact-info-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10%;
+  padding-bottom: 10px;
+}
 
+/* Strip formatting from standard button to allow replacement image to show */
+#contact-info-grid button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Email form items */
 #email-form {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    /* column-gap: 10%; */
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 #email-form div {
-    justify-self: center;
+  justify-self: center;
 }
 
 #email-form-container {
-    position: relative;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 #email-form-overlay {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-size: large;
-    border: 2px dashed black;
-    background-color: rgba(255, 252, 228, 0.7); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: large;
+  border: 2px dashed black;
+  background-color: rgba(
+    255,
+    252,
+    228,
+    0.7
+  ); /* Beige background with opacity */
+  z-index: 2;
 }
 
-#contact-info-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 10%;
-    padding-bottom: 10px;
-    /* justify-content: center; */
-}
-
-#contact-info-grid a {
-    color: black;
-    text-decoration: none;
-}
-
-#contact-info-grid button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    /* outline: inherit; */
-}
-
-#linked-logo-contact {
-    width: 50px;
-    height: auto;
-}
-#github-logo-contact {
-    width: 50px;
-    height: auto;
-}
-
+/* Sizing of Email Symbol in Contact Me section */
 #email-symbol-contact {
-    width: 70px;
-    height: auto;
+  width: 70px;
+  height: auto;
 }
 
-#about-me span {
-    display: block;
+/* Container for header content (nameplace, nav bar) */
+#header-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 250px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-#project-css-teaching-demo-image {
-  object-position: 75% 50%; /* Offsets the image position within the container div */
+/* Sizing of LinkedIn logo in Contact Me section */
+#linked-logo-contact {
+  width: 50px;
+  height: auto;
 }
 
 #placeholder-1 {
-    object-position: 50% 25%;
+  object-position: 50% 25%; /* Offsets image position within container div */
 }
 
-#header-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    height: 250px;
-    margin-left: 30px;
-    margin-right: 30px;
+#my-name {
+  padding-left: 25px;
 }
 
 #nameplate {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   font-size: 35px;
 }
 
@@ -258,151 +266,132 @@ main {
   box-shadow: 1px 1px 7px black;
 }
 
-/* #nameplate div {
-  margin-left: 25px;
-} */
-
-#color-bar {
-  background-color: var(--color-bar-blue);
-  margin-top: 75px;
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  z-index: -1;
+/* Project Card 'gallery' container element */
+#projects {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
 }
 
-
-#my-name {
-    padding-left: 25px;
+#project-css-teaching-demo-image {
+  object-position: 75% 50%; /* Offsets image position within container div */
 }
 
-/* Media Queries */
+/* ==== Media Queries ==== */
 
 @media (max-width: 1200px) {
-    main {
-        margin-left: var(--margin-sides-table);
-        margin-right: var(--margin-sides-table);
-    }
+  main {
+    margin-left: var(--margin-sides-table);
+    margin-right: var(--margin-sides-table);
+  }
 }
 
-@media (max-width:  1031px){
-    #my-name span {
-        display: block;
-    }
+@media (max-width: 1031px) {
+  #my-name span {
+    display: block;
+  }
 }
 
-@media (max-width: 950px){
+@media (max-width: 950px) {
+  /* Elements */
+  main {
+    margin-left: var(--margin-sides-mobile);
+    margin-right: var(--margin-sides-mobile);
+    grid-template-columns: none;
+    row-gap: 10px;
+  }
 
-    #header-container {
-        height: 100px;
-    }
+  /* Classes */
+  .main-left {
+    text-align: right;
+    border-right: none;
+    border-bottom: 4px solid black;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 0px;
+  }
 
-    #my-name span {
-        display: inline;
-    }
+  .main-right {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 
-    #color-bar {
-        margin-top: 0px;
-    }
+  /* Ids */
+  #about-me span {
+    display: inline;
+  }
+  #color-bar {
+    margin-top: 0px;
+  }
 
-    #headshot {
-        display: none;
-    }
+  #header-container {
+    height: 100px;
+  }
 
-    main {
-        margin-left: var(--margin-sides-mobile);
-        margin-right: var(--margin-sides-mobile);
-    }
+  #headshot {
+    display: none;
+  }
 
-    #header-container {
-        /* margin-left: var(--margin-sides-mobile);
-        margin-right: var(--margin-sides-mobile); */
-    }
-
-    #my-name span {
-        display: inline;
-    }
-
-    main {
-        grid-template-columns: none;
-        row-gap: 10px;
-    }
-
-    .main-left {
-        text-align: right;
-        border-right: none;
-        border-bottom: 4px solid black;
-        margin-left: 15px;
-        margin-right: 15px;
-        padding-right: 0px;
-    }
-
-    .main-right {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-
-    #about-me span {
-        display: inline;
-    }
-
-    #my-name span {
-        display: inline;
-    }
-
+  #my-name span {
+    display: inline;
+  }
 }
 
-@media (max-width: 835px){
-    #my-name span {
-        display: block;
-    }
+@media (max-width: 835px) {
+  /* Classes */
+  .project-image {
+    width: 150%;
+  }
 
-    .project-image {
-        width: 150%
-    }
+  /* Ids */
+  #my-name span {
+    display: block;
+  }
 }
 
-@media (max-width: 745px){
+@media (max-width: 745px) {
+  /* Elements */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
+  nav {
+    font-size: large;
+    gap: 15px;
+  }
 
-    .project-image {
-        width: 200%;
-    }
+  nav a {
+    padding: 0px;
+  }
 
-    nav {
-        font-size: large;
-        gap: 15px;
-    }
+  /* Classes */
+  .project-image {
+    width: 200%;
+  }
 
-    nav a {
-        padding: 0px;
-    }
+  /* Ids */
+  #header-container {
+    margin-left: var(--margin-sides-mobile);
+    margin-right: var(--margin-sides-mobile);
+    justify-content: center;
+  }
 
-    #header-container {
-      margin-left: var(--margin-sides-mobile);
-      margin-right: var(--margin-sides-mobile);
-      justify-content: center;
-    }
-    
-    #my-name {
-        padding-left: 0px;
-        font-size: x-large;
-        text-align: center;
-    }
+  #my-name {
+    padding-left: 0px;
+    font-size: x-large;
+    text-align: center;
+  }
 
-    #my-name span {
-        display: inline;
-    }
+  #my-name span {
+    display: inline;
+  }
 
-    #nameplate {
-        display: block;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        align-content: flex-end;
-    }
+  #nameplate {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-content: flex-end;
+  }
 }
