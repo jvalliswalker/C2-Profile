@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div id="color-bar"></div>
+      <section id="header-container">
+        <!-- Headshot and name -->
+        <section id="nameplate">
+          <img
+            src="./assets/images/headshot.jpg"
+            alt="Professional Headshot"
+            id="headshot"
+          />
+          <div id="my-name"><span>Jamil</span> <span>Vallis-Walker</span></div>
+        </section>
+        <!-- Navigation items -->
+        <nav>
+          <a onclick="goToElement(this)" data-goto="about-me">About Me</a>
+          <div class="nav-divider"></div>
+          <a onclick="goToElement(this)" data-goto="projects">Projects</a>
+          <div class="nav-divider"></div>
+          <a onclick="goToElement(this)" data-goto="contact">Contact</a>
+          <div class="nav-divider"></div>
+          <a
+            href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/"
+            target="_blank"
+            id="linkedin-logo"
+            ><img src="./assets/images/linkedin-white.png" alt="LinkedIn logo"
+          /></a>
+          <div class="nav-divider"></div>
+          <a
+            href="https://github.com/jvalliswalker"
+            target="_blank"
+            class="text"
+            ><img src="./assets/images/github-white.png" alt="Github logo"
+          /></a>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <!-- About Me Title -->
+      <div class="main-left" id="about-me">
+        <span>About</span> <span>Me</span>
+      </div>
+      <!-- About Me Content -->
+      <div class="main-right">
+        Current Salesforce Developer and long time tech tinkerer, finally taking
+        the leap into full stack web development.
+      </div>
+      <!-- Projects Title -->
+      <div class="main-left">Projects</div>
+      <!-- Projects Content -->
+      <div class="main-right">
+        <section id="projects">
+          <!-- CSS Teaching Demo -->
+          <div class="project-card full-grid-item">
+            <a
+              href="https://jvalliswalker.github.io/css-teaching-demo/"
+              target="_blank"
+            >
+              <div class="project-title">CSS Teaching Demo</div>
+              <img
+                src="./assets/images/screenshot-css-teaching-demo.png"
+                class="project-image"
+                id="project-css-teaching-demo-image"
+              />
+            </a>
+          </div>
+          <!-- Placeholder 1 -->
+          <div class="project-card half-grid-item-left">
+            <a href="https://www.google.com" target="_blank">
+              <div class="project-title">Placeholder</div>
+              <img
+                src="./assets/images/google.png"
+                class="project-image"
+                id="placeholder-1"
+              />
+            </a>
+          </div>
+          <!-- Placeholder 2 -->
+          <div class="project-card half-grid-item-right">
+            <a href="https://www.google.com" target="_blank">
+              <div class="project-title">Placeholder</div>
+              <img
+                src="./assets/images/google.png"
+                class="project-image"
+                id="placeholder-1"
+              />
+            </a>
+          </div>
+        </section>
+      </div>
+      <!-- Contact Info -->
+      <div class="main-left" id="contact">
+        <span>Contact</span> <span>Info</span>
+      </div>
+      <!-- About Me Content -->
+      <div class="main-right">
+        <div id="contact-info-grid">
+          <div>
+            I'm excited to connect with you. Please reach out to me via email or
+            LinkedIn:
+          </div>
+          <!-- Email Form Button -->
+          <div class="contact-clicker">
+            <button onclick="revealEmailForm()">
+              <img
+                src="./assets/images/email-symbol.png"
+                id="email-symbol-contact"
+                alt="email"
+              />
+            </button>
+            <div>Email</div>
+          </div>
+          <!-- LinkedIn Button -->
+          <div class="contact-clicker">
+            <a
+              href="https://www.linkedin.com/in/jamil-vallis-walker-43706a60/"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/linkedin-blue.png"
+                id="linked-logo-contact"
+                alt="LinkedIn"
+              />
+            </a>
+            <div>LinkedIn</div>
+          </div>
+        </div>
+        <!-- Email Form Container and "Coming Soon" Overlay -->
+        <div id="email-form-container" class="test">
+          <div id="email-form-overlay">Coming Soon</div>
+          <form id="email-form">
+            <div>
+              <p>Name</p>
+              <input type="text" />
+            </div>
+            <div>
+              <p>Email</p>
+              <input type="email" />
+            </div>
+            <div>
+              <p>Message</p>
+              <textarea></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
