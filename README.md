@@ -9,3 +9,5 @@ This project is a professional portfolio website. It demos projects I've complet
 
 ## Link
 
+You can find the active site page at the following link:
+https://jvalliswalker.github.io/C2-Profile/
